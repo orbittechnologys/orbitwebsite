@@ -15,33 +15,36 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+
     <title>Document</title>
-
-
     <style>
-        input[type=text] {
-            width: 20px;
-            height: 20px;
-            box-sizing: border-box;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            background-color: white;
-            /* background-image: url(assets/search.jpg); */
-            background-position: 10px 10px;
-            background-repeat: no-repeat;
-            padding: 12px 20px 12px 40px;
-            -webkit-transition: width 0.4s ease-in-out;
-            transition: width 0.4s ease-in-out;
+        .dropdown-menu.show {
+            display: flex;
+            width: 800px;
+            flex-wrap: wrap;
+
         }
 
-        input[type=text]:focus {
-            width: 100%;
+        .dropdown-item {
+            width: 33, 33%;
+        }
+
+        .nav-item a:hover {
+            text-decoration: offset;
+            color: #F3AF60;
+            border-bottom: 1px solid #F3AF60;
+            padding-bottom: 3px;
+        }
+
+        .nav-item {
+            letter-spacing: 1px;
         }
     </style>
 </head>
 
 <body>
+
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -51,47 +54,116 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse " id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">About us</a>
+                        <a class="nav-link " href="#">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Services</a>
+                        <a class="nav-link " href="#">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Career</a>
+                        <a class="nav-link " href="#">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Support</a>
+                        <a class="nav-link " href="#">Support</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Contact us</a>
+                        <a class="nav-link " href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            All orbit
+                        </a>
+                        <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class=" list-unstyled"><a class="dropdown-item color-black" href="#"></a>
+                                            <h5 class="text-center">Services</h5>
+                                            </a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Web Development</a>
+                                        </li>
+
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">App Development</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Cloud Solutions</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Managed Service
+                                                Providers</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Digital
+                                                Marketing</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">SEO</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class=" list-unstyled"><a class="dropdown-item color-black" href="#"></a>
+                                            <h5 class="text-center">Products</h5>
+                                            </a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Ticketing
+                                                System</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Billing System</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">PMS</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class=" list-unstyled"><a class="dropdown-item color-black" href="#"></a>
+                                            <h5 class="text-left">Company</h5>
+                                            </a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Careers</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Team</a></li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Blog</a></li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">About Orbit</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <ul>
+                                        <li class=" list-unstyled"><a class="dropdown-item color-black" href="#"></a>
+                                            <h5 class="text-left">Other</h5>
+                                            </a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Lorem</a>
+                                        </li>
+                                        <li class=" list-unstyled"><a class="dropdown-item" href="#">Ipsum</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </ul>
                     </li>
                 </ul>
-                <span class="navbar-text p-2">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        All orbit
-                    </button>
 
-                </span>
-                <form>
-                    <i class="fa fa-search"></i>
-                    <input type="text" name="search" placeholder="Search..">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button>
                 </form>
                 <i class='fas fa-user-alt p-3'></i>
-                <a class="nav-link" href="#">Sign in</a>
+                <a class="nav-link text-dark" href="signin.html">Sign in</a>
             </div>
         </div>
     </nav>
 
-
-
-    <div id="carouselExampleCaptions" class="carousel slide p-5" data-bs-ride="carousel">
+    <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide p-3" data-bs-ride="carousel"
+        style="background-color: #F9F6E9;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                 aria-current="true" aria-label="Slide 1"></button>
@@ -156,68 +228,82 @@
         </button>
     </div>
 
-
+    <!-- Kpis -->
     <div class="container mt-5">
-        <h4 class="text" style="text-align: center;">It is a long established fact that</h4>
-        <div class="row ml-5">
-            <div class="col justify-content-center align-items-center">
-                <img src="assets/image 11.png" alt="" srcset="">
-                <p>Get your website</p>
-            </div>
-            <div class="col">
-                <img src="assets/image 12.png" alt="" srcset="">
-                <p>Go on cloud</p>
-            </div>
-            <div class="col">
-                <img src="assets/image 13.png" alt="" srcset="">
-                <p>Lets Scale</p>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-        <div class="col">
-            <div class="card h-100">
-                <img src="assets/image 7.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Websites Development</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a class="text-decoration-none" href="#">LEARN MORE </a>
-                    <i class="fa-solid fa-arrow-right"></i>
+        <div class="text-center">
+            <h3 class="text-center mb-4">It is a long established fact that</h3>
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="assets/image 11.png" alt="" srcset="">
+                    <p><a href="slider.html" class="text-dark">Go to your website</a></p>
                 </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="assets/image 8.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Cloud Solution</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </p>
-                    <a class="text-decoration-none" href="#">LEARN MORE </a>
-                    <i class="fa-solid fa-arrow-right"></i>
+                <div class="col-lg-4">
+                    <img src="assets/image 12.png" alt="" srcset="">
+                    <p><a href="slider.html" class="text-dark">Go to cloud</a></p>
                 </div>
-            </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="assets/image 9.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Digital Marketing</h5>
-                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                    <a class="text-decoration-none" href="#">LEARN MORE </a>
-                    <i class="fa-solid fa-arrow-right"></i>
+                <div class="col-lg-4">
+                    <img src="assets/image 13.png" alt="" srcset="" class="mb-3">
+                    <p><a href="slider.html" class="text-dark">Lets Scale</a></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- services -->
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-5 p-2">
+            <div class="col">
+                <div class="card h-100 border-0">
+                    <img src="assets/image 7.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Websites Development</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="text-center">
+                            <a class="text-decoration-none" href="#" style="color: #F3AF60
+                        ;">LEARN MORE </a>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100  border-0">
+                    <img src="assets/image 8.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Solution</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="text-center">
+                            <a class="text-decoration-none" href="#" style="color: #F3AF60
+                        ;">LEARN MORE </a>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100  border-0">
+                    <img src="assets/image 9.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Digital Marketing</h5>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        </p>
+                        <div class="text-center">
+                            <a class="text-decoration-none" href="#" style="color: #F3AF60
+;">LEARN MORE </a>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container">
-
         </div>
     </footer>
+
 </body>
 
 </html>
